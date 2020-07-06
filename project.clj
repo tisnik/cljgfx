@@ -1,6 +1,6 @@
 ;;; Very simple generator for various graph types.
 ;;;
-;;; Copyright (c) 2014, 2015  Pavel Tisnovsky, Red Hat
+;;; Copyright (c) 2014, 2015, 2020  Pavel Tisnovsky, Red Hat
 ;;; All rights reserved.
 ;;;
 ;;; Redistribution and use in source and binary forms, with or without
@@ -32,7 +32,7 @@
     :url "http://example.com/FIXME"
     :license {:name "Eclipse Public License"
               :url "http://www.eclipse.org/legal/epl-v10.html"}
-    :dependencies [[org.clojure/clojure "1.6.0"]]
+    :dependencies [[org.clojure/clojure "1.8.0"]]
     :plugins [[codox "0.8.11"]
               [test2junit "1.1.0"]
               [lein-cloverage "1.0.2"]]
