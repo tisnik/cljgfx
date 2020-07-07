@@ -30,3 +30,19 @@
 (ns cljgfx.config-test
   (:require [clojure.test  :refer :all]
             [cljgfx.config :refer :all]))
+
+;
+; Common functions used by tests.
+;
+
+(defn callable?
+    "Test if given function-name is bound to the real function."
+    [function-name]
+    (clojure.test/function? function-name))
+
+
+
+;
+; Actual tests that checks if all functions exists.
+;
+
