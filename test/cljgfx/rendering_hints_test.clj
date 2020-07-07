@@ -30,3 +30,36 @@
 (ns cljgfx.rendering-hints-test
   (:require [clojure.test           :refer :all]
             [cljgfx.rendering-hints :refer :all]))
+
+;
+; Common functions used by tests.
+;
+
+(defn callable?
+    "Test if given function-name is bound to the real function."
+    [function-name]
+    (clojure.test/function? function-name))
+
+
+
+;
+; Actual tests that checks if all functions exists.
+;
+
+(deftest test-rendering-hint-interpolation-existence
+  "Check that the cljgfx.rendering-hints/rendering-hint-interpolation definition exists."
+  (testing "if the cljgfx.rendering-hints/rendering-hint-interpolation definition exists."
+    (is (callable? 'cljgfx.rendering-hints/rendering-hint-interpolation))))
+
+
+(deftest test-rendering-hint-antialiasing-existence
+  "Check that the cljgfx.rendering-hints/rendering-hint-antialiasing definition exists."
+  (testing "if the cljgfx.rendering-hints/rendering-hint-antialiasing definition exists."
+    (is (callable? 'cljgfx.rendering-hints/rendering-hint-antialiasing))))
+
+
+(deftest test-set-rendering-hints-existence
+  "Check that the cljgfx.rendering-hints/set-rendering-hints definition exists."
+  (testing "if the cljgfx.rendering-hints/set-rendering-hints definition exists."
+    (is (callable? 'cljgfx.rendering-hints/set-rendering-hints))))
+
