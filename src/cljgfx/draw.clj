@@ -33,42 +33,52 @@
 (require '[cljgfx.calc   :as calc])
 
 (defn clear-canvas
-    "Clear while canvas with the white color."
-    [graphics width height]
-    (let [rectangle-width (- width 0)
-          rectangle-height (- height 0)]
-          (.setColor graphics      Color/black)
-          (.setBackground graphics Color/white)
-          (.clearRect graphics 0 0 rectangle-width rectangle-height)))
+  "Clear while canvas with the white color."
+  [graphics width height]
+  (let [rectangle-width (- width 0)
+        rectangle-height (- height 0)]
+    (.setColor graphics      Color/black)
+    (.setBackground graphics Color/white)
+    (.clearRect graphics 0 0 rectangle-width rectangle-height)))
 
 (defn draw-arc
-    "Draw arc onto the canvas."
-    [graphics width height arc-width arc-height start-angle arc-angle]
-    (let [center-x (/ width 2)
-          center-y (/ height 2)
-          radius   (/ arc-height 2)
-          x1 (+ center-x (* radius (Math/cos(calc/deg->rad start-angle))))
-          y1 (- center-y (* radius (Math/sin(calc/deg->rad start-angle))))]
-          (.setColor graphics Color/black)
-          (.drawArc  graphics config/arc-border config/arc-border
-                     arc-width arc-height start-angle (inc arc-angle))
-          (.drawLine graphics center-x center-y x1 y1)))
+  "Draw arc onto the canvas."
+  [graphics width height arc-width arc-height start-angle arc-angle]
+  (let [center-x (/ width 2)
+        center-y (/ height 2)
+        radius   (/ arc-height 2)
+        x1 (+ center-x (* radius (Math/cos (calc/deg->rad start-angle))))
+        y1 (- center-y (* radius (Math/sin (calc/deg->rad start-angle))))]
+    (.setColor graphics Color/black)
+    (.drawArc graphics
+              config/arc-border
+              config/arc-border
+              arc-width
+              arc-height
+              start-angle
+              (inc arc-angle))
+    (.drawLine graphics center-x center-y x1 y1)))
 
 (defn draw-label
-    "Draw label (text) onto the canvas."
-    [graphics width height arc-width arc-height start-angle arc-angle percentage]
-    (let [center-x (/ width 2)
-          center-y (/ height 2)
-          radius   (+ 20 (/ arc-height 2))
-          angle    (+ start-angle (/ arc-angle 2.0))
-          x1 (+ center-x (* radius (Math/cos(calc/deg->rad angle))))
-          y1 (- center-y (* radius (Math/sin(calc/deg->rad angle))))]
-          (.drawString graphics (str percentage "%") (int (- x1 8)) (int y1))))
+  "Draw label (text) onto the canvas."
+  [graphics width height arc-width arc-height start-angle arc-angle percentage]
+  (let [center-x (/ width 2)
+        center-y (/ height 2)
+        radius   (+ 20 (/ arc-height 2))
+        angle    (+ start-angle (/ arc-angle 2.0))
+        x1 (+ center-x (* radius (Math/cos (calc/deg->rad angle))))
+        y1 (- center-y (* radius (Math/sin (calc/deg->rad angle))))]
+    (.drawString graphics (str percentage "%") (int (- x1 8)) (int y1))))
 
 (defn fill-arc
-     "Draw filled arc onto the canvas."
-     [graphics arc-width arc-height arc-color start-angle arc-angle]
-     (.setColor graphics arc-color)
-     (.fillArc  graphics config/arc-border config/arc-border
-                arc-width arc-height start-angle (inc arc-angle)))
+  "Draw filled arc onto the canvas."
+  [graphics arc-width arc-height arc-color start-angle arc-angle]
+  (.setColor graphics arc-color)
+  (.fillArc graphics
+            config/arc-border
+            config/arc-border
+            arc-width
+            arc-height
+            start-angle
+            (inc arc-angle)))
 
