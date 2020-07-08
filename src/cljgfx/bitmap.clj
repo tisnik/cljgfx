@@ -34,17 +34,17 @@
 (import 'javax.imageio.ImageIO)
 
 (defn create-bitmap
-    "Create new bitmap with given dimension."
-    [width height]
-    (new BufferedImage width height BufferedImage/TYPE_4BYTE_ABGR))
+  "Create new bitmap with given dimension."
+  [width height]
+  (new BufferedImage width height BufferedImage/TYPE_4BYTE_ABGR))
 
 (defn write-bitmap
-    "Write bitmap into the PNG file."
-    [filename bitmap]
-    (ImageIO/write bitmap "png" (new File filename)))
+  "Write bitmap into the PNG file."
+  [filename bitmap]
+  (ImageIO/write bitmap "png" (new File filename)))
 
 (defn get-graphics-2d
-    "Return Graphics or Graphics2d object for the given bitmap."
-    [bitmap]
-    (.getGraphics bitmap))
+  "Return Graphics or Graphics2d object for the given bitmap."
+  [bitmap]
+  (.getGraphics bitmap))
 
