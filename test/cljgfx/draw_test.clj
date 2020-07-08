@@ -36,9 +36,9 @@
 ;
 
 (defn callable?
-    "Test if given function-name is bound to the real function."
-    [function-name]
-    (clojure.test/function? function-name))
+  "Test if given function-name is bound to the real function."
+  [function-name]
+  (clojure.test/function? function-name))
 
 
 
@@ -49,23 +49,23 @@
 (deftest test-clear-canvas-existence
   "Check that the cljgfx.draw/clear-canvas definition exists."
   (testing "if the cljgfx.draw/clear-canvas definition exists."
-    (is (callable? 'cljgfx.draw/clear-canvas))))
+           (is (callable? 'cljgfx.draw/clear-canvas))))
 
 
 (deftest test-draw-arc-existence
   "Check that the cljgfx.draw/draw-arc definition exists."
   (testing "if the cljgfx.draw/draw-arc definition exists."
-    (is (callable? 'cljgfx.draw/draw-arc))))
+           (is (callable? 'cljgfx.draw/draw-arc))))
 
 
 (deftest test-draw-label-existence
   "Check that the cljgfx.draw/draw-label definition exists."
   (testing "if the cljgfx.draw/draw-label definition exists."
-    (is (callable? 'cljgfx.draw/draw-label))))
+           (is (callable? 'cljgfx.draw/draw-label))))
 
 
 (deftest test-fill-arc-existence
   "Check that the cljgfx.draw/fill-arc definition exists."
   (testing "if the cljgfx.draw/fill-arc definition exists."
-    (is (callable? 'cljgfx.draw/fill-arc))))
+           (is (callable? 'cljgfx.draw/fill-arc))))
 
