@@ -36,9 +36,9 @@
 ;
 
 (defn callable?
-    "Test if given function-name is bound to the real function."
-    [function-name]
-    (clojure.test/function? function-name))
+  "Test if given function-name is bound to the real function."
+  [function-name]
+  (clojure.test/function? function-name))
 
 
 
@@ -49,35 +49,35 @@
 (deftest test-draw-filled-arcs-existence
   "Check that the cljgfx.core/draw-filled-arcs definition exists."
   (testing "if the cljgfx.core/draw-filled-arcs definition exists."
-    (is (callable? 'cljgfx.core/draw-filled-arcs))))
+           (is (callable? 'cljgfx.core/draw-filled-arcs))))
 
 
 (deftest test-draw-arcs-existence
   "Check that the cljgfx.core/draw-arcs definition exists."
   (testing "if the cljgfx.core/draw-arcs definition exists."
-    (is (callable? 'cljgfx.core/draw-arcs))))
+           (is (callable? 'cljgfx.core/draw-arcs))))
 
 
 (deftest test-draw-labels-existence
   "Check that the cljgfx.core/draw-labels definition exists."
   (testing "if the cljgfx.core/draw-labels definition exists."
-    (is (callable? 'cljgfx.core/draw-labels))))
+           (is (callable? 'cljgfx.core/draw-labels))))
 
 
 (deftest test-draw-pie-chart-existence
   "Check that the cljgfx.core/draw-pie-chart definition exists."
   (testing "if the cljgfx.core/draw-pie-chart definition exists."
-    (is (callable? 'cljgfx.core/draw-pie-chart))))
+           (is (callable? 'cljgfx.core/draw-pie-chart))))
 
 
 (deftest test-generate-pie-chart-existence
   "Check that the cljgfx.core/generate-pie-chart definition exists."
   (testing "if the cljgfx.core/generate-pie-chart definition exists."
-    (is (callable? 'cljgfx.core/generate-pie-chart))))
+           (is (callable? 'cljgfx.core/generate-pie-chart))))
 
 
 (deftest test--main-existence
   "Check that the cljgfx.core/-main definition exists."
   (testing "if the cljgfx.core/-main definition exists."
-    (is (callable? 'cljgfx.core/-main))))
+           (is (callable? 'cljgfx.core/-main))))
 
