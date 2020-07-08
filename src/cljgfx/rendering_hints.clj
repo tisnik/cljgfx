@@ -32,24 +32,24 @@
 (import 'java.awt.RenderingHints)
 
 (defn rendering-hint-interpolation
-    "Return new object representing interpolation rendering hints settings."
-    []
-    (new RenderingHints
-         RenderingHints/KEY_ALPHA_INTERPOLATION
-         RenderingHints/VALUE_ALPHA_INTERPOLATION_QUALITY))
+  "Return new object representing interpolation rendering hints settings."
+  []
+  (new RenderingHints
+       RenderingHints/KEY_ALPHA_INTERPOLATION
+       RenderingHints/VALUE_ALPHA_INTERPOLATION_QUALITY))
 
 (defn rendering-hint-antialiasing
-    "Return new object representing antialiasing rendering hints settings."
-    []
-    (new RenderingHints
-         RenderingHints/KEY_ANTIALIASING
-         RenderingHints/VALUE_ANTIALIAS_ON))
+  "Return new object representing antialiasing rendering hints settings."
+  []
+  (new RenderingHints
+       RenderingHints/KEY_ANTIALIASING
+       RenderingHints/VALUE_ANTIALIAS_ON))
 
 (defn set-rendering-hints
-    "Set the required rendering hints for the given instance of Graphics2D"
-    [graphics]
-    (let [interpolation (rendering-hint-interpolation)
-          antialiasing  (rendering-hint-antialiasing)]
-          (.addRenderingHints graphics interpolation)
-          (.addRenderingHints graphics antialiasing)))
+  "Set the required rendering hints for the given instance of Graphics2D"
+  [graphics]
+  (let [interpolation (rendering-hint-interpolation)
+        antialiasing  (rendering-hint-antialiasing)]
+    (.addRenderingHints graphics interpolation)
+    (.addRenderingHints graphics antialiasing)))
 
