@@ -36,9 +36,9 @@
 ;
 
 (defn callable?
-    "Test if given function-name is bound to the real function."
-    [function-name]
-    (clojure.test/function? function-name))
+  "Test if given function-name is bound to the real function."
+  [function-name]
+  (clojure.test/function? function-name))
 
 
 
@@ -49,17 +49,17 @@
 (deftest test-calc-arc-angle-existence
   "Check that the cljgfx.calc/calc-arc-angle definition exists."
   (testing "if the cljgfx.calc/calc-arc-angle definition exists."
-    (is (callable? 'cljgfx.calc/calc-arc-angle))))
+           (is (callable? 'cljgfx.calc/calc-arc-angle))))
 
 
 (deftest test-calc-percentage-existence
   "Check that the cljgfx.calc/calc-percentage definition exists."
   (testing "if the cljgfx.calc/calc-percentage definition exists."
-    (is (callable? 'cljgfx.calc/calc-percentage))))
+           (is (callable? 'cljgfx.calc/calc-percentage))))
 
 
 (deftest test-deg->rad-existence
   "Check that the cljgfx.calc/deg->rad definition exists."
   (testing "if the cljgfx.calc/deg->rad definition exists."
-    (is (callable? 'cljgfx.calc/deg->rad))))
+           (is (callable? 'cljgfx.calc/deg->rad))))
 
