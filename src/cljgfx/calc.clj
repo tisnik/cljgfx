@@ -30,17 +30,17 @@
 (ns cljgfx.calc)
 
 (defn calc-arc-angle
-    "Return the arc angle for the given value between 0.0 - 1.0."
-    [value total-value]
-    (/ (* 360.0 value) total-value))
+  "Return the arc angle for the given value between 0.0 - 1.0."
+  [value total-value]
+  (/ (* 360.0 value) total-value))
 
 (defn calc-percentage
-    "Calculate percentage for the given value between 0.0 - 1.0."
-    [value total-value]
-    (Math/round (/ (* 100.0 value) total-value)))
-    
+  "Calculate percentage for the given value between 0.0 - 1.0."
+  [value total-value]
+  (Math/round (/ (* 100.0 value) total-value)))
+
 (defn deg->rad
-    "Converts degrees to radians."
-    [deg]
-    (/ (* Math/PI deg) 180.0))
+  "Converts degrees to radians."
+  [deg]
+  (/ (* Math/PI deg) 180.0))
 
