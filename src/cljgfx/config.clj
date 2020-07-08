@@ -30,14 +30,14 @@
 (ns cljgfx.config)
 
 (def arc-border
-    "Minimal distance between the central arcs and image borders."
-    35)
+  "Minimal distance between the central arcs and image borders."
+  35)
 
 (def default-graph-width
-    "Graph width measured in pixels."
-    400)
+  "Graph width measured in pixels."
+  400)
 
 (def default-graph-height
-    "Graph height measured in pixels."
-    400)
+  "Graph height measured in pixels."
+  400)
 
