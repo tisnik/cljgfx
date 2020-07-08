@@ -36,9 +36,9 @@
 ;
 
 (defn callable?
-    "Test if given function-name is bound to the real function."
-    [function-name]
-    (clojure.test/function? function-name))
+  "Test if given function-name is bound to the real function."
+  [function-name]
+  (clojure.test/function? function-name))
 
 
 
@@ -49,16 +49,16 @@
 (deftest test-create-bitmap-existence
   "Check that the cljgfx.bitmap/create-bitmap definition exists."
   (testing "if the cljgfx.bitmap/create-bitmap definition exists."
-    (is (callable? 'cljgfx.bitmap/create-bitmap))))
+           (is (callable? 'cljgfx.bitmap/create-bitmap))))
 
 
 (deftest test-write-bitmap-existence
   "Check that the cljgfx.bitmap/write-bitmap definition exists."
   (testing "if the cljgfx.bitmap/write-bitmap definition exists."
-    (is (callable? 'cljgfx.bitmap/write-bitmap))))
+           (is (callable? 'cljgfx.bitmap/write-bitmap))))
 
 
 (deftest test-get-graphics-2d-existence
   "Check that the cljgfx.bitmap/get-graphics-2d definition exists."
   (testing "if the cljgfx.bitmap/get-graphics-2d definition exists."
-    (is (callable? 'cljgfx.bitmap/get-graphics-2d))))
+           (is (callable? 'cljgfx.bitmap/get-graphics-2d))))
