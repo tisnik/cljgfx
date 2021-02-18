@@ -1,6 +1,6 @@
 ;;; Very simple generator for various graph types.
 ;;;
-;;; Copyright (c) 2014, 2015, 2020  Pavel Tisnovsky, Red Hat
+;;; Copyright (c) 2014, 2015, 2020, 2021  Pavel Tisnovsky, Red Hat
 ;;; All rights reserved.
 ;;;
 ;;; Redistribution and use in source and binary forms, with or without
@@ -28,12 +28,12 @@
 ;;; Project definition file.
 
 (defproject cljgfx "0.1.0-SNAPSHOT"
-  :description "FIXME: write description"
+  :description "Various graphics-related utility functions for the Clojure"
   :url "http://example.com/FIXME"
   :license {:name "Eclipse Public License",
             :url "http://www.eclipse.org/legal/epl-v10.html"}
   :dependencies [[org.clojure/clojure "1.8.0"]]
-  :plugins [[codox "0.8.11"]
+  :plugins [[lein-codox "0.10.7"]
             [test2junit "1.1.0"]
             [lein-cloverage "1.0.2"]]
   :main cljgfx.core)
