@@ -1,6 +1,6 @@
 ;;; Very simple generator for various graph types.
 ;;;
-;;; Copyright (c) 2014, 2015, 2020  Pavel Tisnovsky, Red Hat
+;;; Copyright (c) 2014, 2015, 2020, 2021  Pavel Tisnovsky, Red Hat
 ;;; All rights reserved.
 ;;;
 ;;; Redistribution and use in source and binary forms, with or without
