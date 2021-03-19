@@ -4,12 +4,15 @@ Very simple generator for various graph types.
 
 ## Usage
 
+```
 lein run
+```
+
 (TBD)
 
 ## Licence
 
-Copyright (c) 2014, 2015  Pavel Tisnovsky, Red Hat
+Copyright (c) 2014, 2015, 2021  Pavel Tisnovsky, Red Hat
 All rights reserved.
 
 Redistribution and use in source and binary forms, with or without
